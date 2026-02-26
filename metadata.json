@@ -1,0 +1,5 @@
+{
+  "name": "VisionX AI",
+  "description": "AI-powered Optical ERP and Eye Diagnosis System",
+  "requestFramePermissions": ["camera"]
+}
