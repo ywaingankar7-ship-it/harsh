@@ -366,9 +366,11 @@ app.get("/api/notifications", authenticate, (req, res) => {
 // Vite Middleware
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {
+const configPath = path.join(process.cwd(), "vite.config.js");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
+      configFile: configPath,
     });
     app.use(vite.middlewares);
   } else {
